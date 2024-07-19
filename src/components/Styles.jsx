@@ -9,6 +9,10 @@ export const StyledCanvas = styled.canvas`
   &:active {
     cursor: pointer;
   }
+  @media (max-width: 768px) {
+    width: 100%;
+    height: auto;
+  }
 `;
 
 export const StyledDiv = styled.div`
@@ -16,26 +20,54 @@ export const StyledDiv = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  @media (max-width: 768px) {
+    padding: 10px;
+  }
 `;
+
 export const ToolsDiv = styled(StyledDiv)`
   background-color: black;
   padding: 10px 100px;
   flex-direction: row;
   justify-content: space-between;
   margin: 10px;
+  @media (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+  }
 `;
+
 export const Div = styled(ToolsDiv)`
   display: flex;
   justify-content: space-between;
   /* background-color: transparent; */
 `;
+
 export const StyledInput = styled.input`
   padding: ${(prop) =>
     prop.type === "color" ? "0px 10px" : "2px 10px 2px 10px"};
   margin: 0px 20px;
   background-color: rgb(39 123 145);
   color: white;
+  @media (max-width: 768px) {
+    margin: 32px;
+  }
 `;
+
+// export const StyledInput1 = styled.input`
+//   padding: ${(prop) =>
+//     prop.type === "color" ? "0px 10px" : "2px 10px 2px 10px"};
+//   margin: 0px 20px;
+//   background-color: rgb(39 123 145);
+//   color: white;
+//   @media (max-width: 768px) {
+//     display: flex;
+//     flex-direction: column;
+//     margin: 5px;
+//   }
+// `;
+
 export const GlobalStyle = createGlobalStyle`
 body{
     background: black;
@@ -50,6 +82,10 @@ export const Button = styled.button`
   border-radius: 10px;
   background-color: rgb(39 123 145);
   color: white;
+  @media (max-width: 768px) {
+    margin: 5px;
+    padding: 5px 10px;
+  }
 
   &:hover {
     transition: color 2s, background-color 2s, text-transform 3s;
